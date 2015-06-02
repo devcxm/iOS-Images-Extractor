@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C24D24F01B16047E00DDE534 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24D24EF1B16047E00DDE534 /* Images.xcassets */; };
+		C24D25141B16051500DDE534 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C24D25121B16051500DDE534 /* AppDelegate.m */; };
+		C24D25151B16051500DDE534 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C24D25131B16051500DDE534 /* main.m */; };
+		C24D252C1B16053200DDE534 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = C24D25201B16053200DDE534 /* ioapi.c */; };
+		C24D252D1B16053200DDE534 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = C24D25221B16053200DDE534 /* mztools.c */; };
+		C24D252E1B16053200DDE534 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = C24D25241B16053200DDE534 /* unzip.c */; };
+		C24D252F1B16053200DDE534 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = C24D25261B16053200DDE534 /* zip.c */; };
+		C24D25301B16053200DDE534 /* ZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = C24D25291B16053200DDE534 /* ZipArchive.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C24D25351B16054000DDE534 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24D25331B16054000DDE534 /* MainViewController.m */; };
+		C24D25361B16054000DDE534 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C24D25341B16054000DDE534 /* MainViewController.xib */; };
+		C24D253A1B16054700DDE534 /* XMFileItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C24D25391B16054700DDE534 /* XMFileItem.m */; };
+		C24D253E1B16058A00DDE534 /* XMDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = C24D253D1B16058A00DDE534 /* XMDragView.m */; };
+		C24D25401B16073B00DDE534 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C24D253F1B16073B00DDE534 /* libz.dylib */; };
+		C24D254B1B16110000DDE534 /* DCOAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C24D25431B16110000DDE534 /* DCOAboutWindow.xib */; };
+		C24D254C1B16110000DDE534 /* DCOAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24D25451B16110000DDE534 /* DCOAboutWindowController.m */; };
+		C24D254D1B16110000DDE534 /* DCOTransparentScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = C24D25481B16110000DDE534 /* DCOTransparentScroller.m */; };
+		C24D254E1B16110000DDE534 /* DCOTransparentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C24D254A1B16110000DDE534 /* DCOTransparentScrollView.m */; };
+		C24D25531B16120100DDE534 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C24D25511B16120100DDE534 /* Credits.rtf */; };
+		C2AE37681B1992090099434F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C2AE37671B1992090099434F /* LICENSE */; };
+		C2CF8B821B17F7EC00AA92B1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C24D24F11B16047E00DDE534 /* MainMenu.xib */; };
+		C2CF8B861B1805EF00AA92B1 /* CARExtractor in Resources */ = {isa = PBXBuildFile; fileRef = C2CF8B851B1805EF00AA92B1 /* CARExtractor */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C24D24E51B16047E00DDE534 /* iOS Images Extractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Images Extractor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C24D24E91B16047E00DDE534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C24D24EF1B16047E00DDE534 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C24D24F21B16047E00DDE534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C24D25111B16051500DDE534 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C24D25121B16051500DDE534 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C24D25131B16051500DDE534 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C24D251F1B16053200DDE534 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		C24D25201B16053200DDE534 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		C24D25211B16053200DDE534 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		C24D25221B16053200DDE534 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		C24D25231B16053200DDE534 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		C24D25241B16053200DDE534 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		C24D25251B16053200DDE534 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		C24D25261B16053200DDE534 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		C24D25271B16053200DDE534 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		C24D25281B16053200DDE534 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		C24D25291B16053200DDE534 /* ZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipArchive.m; sourceTree = "<group>"; };
+		C24D25321B16054000DDE534 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		C24D25331B16054000DDE534 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		C24D25341B16054000DDE534 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		C24D25381B16054700DDE534 /* XMFileItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMFileItem.h; sourceTree = "<group>"; };
+		C24D25391B16054700DDE534 /* XMFileItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMFileItem.m; sourceTree = "<group>"; };
+		C24D253C1B16058A00DDE534 /* XMDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMDragView.h; sourceTree = "<group>"; };
+		C24D253D1B16058A00DDE534 /* XMDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMDragView.m; sourceTree = "<group>"; };
+		C24D253F1B16073B00DDE534 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		C24D25431B16110000DDE534 /* DCOAboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCOAboutWindow.xib; sourceTree = "<group>"; };
+		C24D25441B16110000DDE534 /* DCOAboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCOAboutWindowController.h; sourceTree = "<group>"; };
+		C24D25451B16110000DDE534 /* DCOAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCOAboutWindowController.m; sourceTree = "<group>"; };
+		C24D25471B16110000DDE534 /* DCOTransparentScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCOTransparentScroller.h; sourceTree = "<group>"; };
+		C24D25481B16110000DDE534 /* DCOTransparentScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCOTransparentScroller.m; sourceTree = "<group>"; };
+		C24D25491B16110000DDE534 /* DCOTransparentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCOTransparentScrollView.h; sourceTree = "<group>"; };
+		C24D254A1B16110000DDE534 /* DCOTransparentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCOTransparentScrollView.m; sourceTree = "<group>"; };
+		C24D25511B16120100DDE534 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		C2AE37671B1992090099434F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../../../LICENSE; sourceTree = "<group>"; };
+		C2CF8B851B1805EF00AA92B1 /* CARExtractor */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = CARExtractor; path = ../../CARExtractor/Product/CARExtractor; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C24D24E21B16047D00DDE534 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C24D25401B16073B00DDE534 /* libz.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C24D24DC1B16047D00DDE534 = {
+			isa = PBXGroup;
+			children = (
+				C24D24E71B16047E00DDE534 /* iOSImagesExtractor */,
+				C24D24E61B16047E00DDE534 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C24D24E61B16047E00DDE534 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C24D24E51B16047E00DDE534 /* iOS Images Extractor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C24D24E71B16047E00DDE534 /* iOSImagesExtractor */ = {
+			isa = PBXGroup;
+			children = (
+				C24D24E91B16047E00DDE534 /* Info.plist */,
+				C24D25411B160FEF00DDE534 /* Resource */,
+				C24D250E1B16051500DDE534 /* Classes */,
+				C24D24E81B16047E00DDE534 /* Supporting Files */,
+			);
+			path = iOSImagesExtractor;
+			sourceTree = "<group>";
+		};
+		C24D24E81B16047E00DDE534 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2CF8B851B1805EF00AA92B1 /* CARExtractor */,
+				C24D253F1B16073B00DDE534 /* libz.dylib */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C24D250E1B16051500DDE534 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C24D250F1B16051500DDE534 /* Main */,
+				C24D25161B16053200DDE534 /* Libs */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C24D250F1B16051500DDE534 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C24D25101B16051500DDE534 /* App */,
+				C24D25371B16054700DDE534 /* Models */,
+				C24D253B1B16056700DDE534 /* Views */,
+				C24D25311B16054000DDE534 /* Controllers */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C24D25101B16051500DDE534 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C24D25111B16051500DDE534 /* AppDelegate.h */,
+				C24D25121B16051500DDE534 /* AppDelegate.m */,
+				C24D25131B16051500DDE534 /* main.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C24D25161B16053200DDE534 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				C2AE37671B1992090099434F /* LICENSE */,
+				C24D25421B16110000DDE534 /* DCOAboutWindow */,
+				C24D251D1B16053200DDE534 /* ZipArchive */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		C24D251D1B16053200DDE534 /* ZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				C24D251E1B16053200DDE534 /* minizip */,
+				C24D25281B16053200DDE534 /* ZipArchive.h */,
+				C24D25291B16053200DDE534 /* ZipArchive.m */,
+			);
+			path = ZipArchive;
+			sourceTree = "<group>";
+		};
+		C24D251E1B16053200DDE534 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				C24D251F1B16053200DDE534 /* crypt.h */,
+				C24D25201B16053200DDE534 /* ioapi.c */,
+				C24D25211B16053200DDE534 /* ioapi.h */,
+				C24D25221B16053200DDE534 /* mztools.c */,
+				C24D25231B16053200DDE534 /* mztools.h */,
+				C24D25241B16053200DDE534 /* unzip.c */,
+				C24D25251B16053200DDE534 /* unzip.h */,
+				C24D25261B16053200DDE534 /* zip.c */,
+				C24D25271B16053200DDE534 /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		C24D25311B16054000DDE534 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C24D25321B16054000DDE534 /* MainViewController.h */,
+				C24D25331B16054000DDE534 /* MainViewController.m */,
+				C24D25341B16054000DDE534 /* MainViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C24D25371B16054700DDE534 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C24D25381B16054700DDE534 /* XMFileItem.h */,
+				C24D25391B16054700DDE534 /* XMFileItem.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C24D253B1B16056700DDE534 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C24D253C1B16058A00DDE534 /* XMDragView.h */,
+				C24D253D1B16058A00DDE534 /* XMDragView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C24D25411B160FEF00DDE534 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C24D254F1B1611F300DDE534 /* About */,
+				C24D24EF1B16047E00DDE534 /* Images.xcassets */,
+				C24D24F11B16047E00DDE534 /* MainMenu.xib */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		C24D25421B16110000DDE534 /* DCOAboutWindow */ = {
+			isa = PBXGroup;
+			children = (
+				C24D25431B16110000DDE534 /* DCOAboutWindow.xib */,
+				C24D25441B16110000DDE534 /* DCOAboutWindowController.h */,
+				C24D25451B16110000DDE534 /* DCOAboutWindowController.m */,
+				C24D25461B16110000DDE534 /* DCOTransparentScroller */,
+			);
+			path = DCOAboutWindow;
+			sourceTree = "<group>";
+		};
+		C24D25461B16110000DDE534 /* DCOTransparentScroller */ = {
+			isa = PBXGroup;
+			children = (
+				C24D25471B16110000DDE534 /* DCOTransparentScroller.h */,
+				C24D25481B16110000DDE534 /* DCOTransparentScroller.m */,
+				C24D25491B16110000DDE534 /* DCOTransparentScrollView.h */,
+				C24D254A1B16110000DDE534 /* DCOTransparentScrollView.m */,
+			);
+			path = DCOTransparentScroller;
+			sourceTree = "<group>";
+		};
+		C24D254F1B1611F300DDE534 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				C24D25511B16120100DDE534 /* Credits.rtf */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C24D24E41B16047D00DDE534 /* iOSImagesExtractor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C24D25021B16047E00DDE534 /* Build configuration list for PBXNativeTarget "iOSImagesExtractor" */;
+			buildPhases = (
+				C24D24E11B16047D00DDE534 /* Sources */,
+				C24D24E21B16047D00DDE534 /* Frameworks */,
+				C24D24E31B16047D00DDE534 /* Resources */,
+				C2AE37661B1991BC0099434F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSImagesExtractor;
+			productName = iOSImagesExtractor;
+			productReference = C24D24E51B16047E00DDE534 /* iOS Images Extractor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C24D24DD1B16047D00DDE534 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = chi;
+				TargetAttributes = {
+					C24D24E41B16047D00DDE534 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = C24D24E01B16047D00DDE534 /* Build configuration list for PBXProject "iOSImagesExtractor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C24D24DC1B16047D00DDE534;
+			productRefGroup = C24D24E61B16047E00DDE534 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C24D24E41B16047D00DDE534 /* iOSImagesExtractor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C24D24E31B16047D00DDE534 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2CF8B861B1805EF00AA92B1 /* CARExtractor in Resources */,
+				C2CF8B821B17F7EC00AA92B1 /* MainMenu.xib in Resources */,
+				C24D254B1B16110000DDE534 /* DCOAboutWindow.xib in Resources */,
+				C2AE37681B1992090099434F /* LICENSE in Resources */,
+				C24D25531B16120100DDE534 /* Credits.rtf in Resources */,
+				C24D24F01B16047E00DDE534 /* Images.xcassets in Resources */,
+				C24D25361B16054000DDE534 /* MainViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C2AE37661B1991BC0099434F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"${PROJECT_DIR}/../Products\";\ncp -r \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app\" \"${PROJECT_DIR}/../Products/${PRODUCT_NAME}.app\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C24D24E11B16047D00DDE534 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C24D25151B16051500DDE534 /* main.m in Sources */,
+				C24D25301B16053200DDE534 /* ZipArchive.m in Sources */,
+				C24D252F1B16053200DDE534 /* zip.c in Sources */,
+				C24D254D1B16110000DDE534 /* DCOTransparentScroller.m in Sources */,
+				C24D25351B16054000DDE534 /* MainViewController.m in Sources */,
+				C24D254E1B16110000DDE534 /* DCOTransparentScrollView.m in Sources */,
+				C24D252E1B16053200DDE534 /* unzip.c in Sources */,
+				C24D252D1B16053200DDE534 /* mztools.c in Sources */,
+				C24D253A1B16054700DDE534 /* XMFileItem.m in Sources */,
+				C24D253E1B16058A00DDE534 /* XMDragView.m in Sources */,
+				C24D25141B16051500DDE534 /* AppDelegate.m in Sources */,
+				C24D254C1B16110000DDE534 /* DCOAboutWindowController.m in Sources */,
+				C24D252C1B16053200DDE534 /* ioapi.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C24D24F11B16047E00DDE534 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C24D24F21B16047E00DDE534 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C24D25001B16047E00DDE534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C24D25011B16047E00DDE534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C24D25031B16047E00DDE534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = iOSImagesExtractor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "iOS Images Extractor";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C24D25041B16047E00DDE534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = iOSImagesExtractor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "iOS Images Extractor";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C24D24E01B16047D00DDE534 /* Build configuration list for PBXProject "iOSImagesExtractor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C24D25001B16047E00DDE534 /* Debug */,
+				C24D25011B16047E00DDE534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C24D25021B16047E00DDE534 /* Build configuration list for PBXNativeTarget "iOSImagesExtractor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C24D25031B16047E00DDE534 /* Debug */,
+				C24D25041B16047E00DDE534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C24D24DD1B16047D00DDE534 /* Project object */;
+}
