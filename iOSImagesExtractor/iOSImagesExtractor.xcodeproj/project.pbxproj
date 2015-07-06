@@ -101,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				C24D24E91B16047E00DDE534 /* Info.plist */,
-				C24D25411B160FEF00DDE534 /* Resource */,
+				C24D25411B160FEF00DDE534 /* Resources */,
 				C24D250E1B16051500DDE534 /* Classes */,
 				C24D24E81B16047E00DDE534 /* Supporting Files */,
 			);
@@ -211,14 +211,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C24D25411B160FEF00DDE534 /* Resource */ = {
+		C24D25411B160FEF00DDE534 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				C24D254F1B1611F300DDE534 /* About */,
 				C24D24EF1B16047E00DDE534 /* Images.xcassets */,
 				C24D24F11B16047E00DDE534 /* MainMenu.xib */,
 			);
-			name = Resource;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		C24D25421B16110000DDE534 /* DCOAboutWindow */ = {
