@@ -6,6 +6,9 @@ iOS Images Extractor is a Mac app to normalize , decode and extract images from 
 - `ipa`
 - `car(Assets.car)`
 
+##Usage
+###[中文使用方法看这里](/README_zh-Hans.md)
+
 ##Screenshot
 ![(Screenshot)](https://cloud.githubusercontent.com/assets/8568955/7927878/874f0594-0918-11e5-9fe3-452372f5affd.gif)
 
@@ -27,4 +30,4 @@ _**OS X 10.8 or later.**_
 
 ## License
 
-iOS Images Extractor is released under the MIT license. See [LICENSE](https://github.com/devcxm/iOS-Images-Extractor/blob/master/LICENSE) for details.
+iOS Images Extractor is released under the MIT license. See [LICENSE](/LICENSE) for details.
