@@ -1,0 +1,3 @@
+[submodule "CARExtractor/CARExtractor"]
+	path = CARExtractor/CARExtractor
+	url = https://github.com/Marxon13/iOS-Asset-Extractor
