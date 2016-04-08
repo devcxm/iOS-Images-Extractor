@@ -7,13 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CA7B544419FF10F80019A015 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7B544319FF10F80019A015 /* main.m */; };
+		C28FC06C1CB74CDF00ACC937 /* CARExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FC0521CB74CDF00ACC937 /* CARExporter.m */; };
+		C28FC06D1CB74CDF00ACC937 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C28FC06B1CB74CDF00ACC937 /* main.m */; };
 		CA7B546419FF4A110019A015 /* CoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7B546319FF4A110019A015 /* CoreUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C28FC0471CB74CDF00ACC937 /* _CSIRenditionBlockData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CSIRenditionBlockData.h; sourceTree = "<group>"; };
+		C28FC0481CB74CDF00ACC937 /* _CUIExternalLinkRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CUIExternalLinkRendition.h; sourceTree = "<group>"; };
+		C28FC0491CB74CDF00ACC937 /* _CUIInternalLinkRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CUIInternalLinkRendition.h; sourceTree = "<group>"; };
+		C28FC04A1CB74CDF00ACC937 /* _CUILayerStackRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CUILayerStackRendition.h; sourceTree = "<group>"; };
+		C28FC04B1CB74CDF00ACC937 /* _CUIPDFRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CUIPDFRendition.h; sourceTree = "<group>"; };
+		C28FC04C1CB74CDF00ACC937 /* _CUIRawDataRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CUIRawDataRendition.h; sourceTree = "<group>"; };
+		C28FC04D1CB74CDF00ACC937 /* _CUIRawPixelRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CUIRawPixelRendition.h; sourceTree = "<group>"; };
+		C28FC04E1CB74CDF00ACC937 /* _CUIThemeEffectRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CUIThemeEffectRendition.h; sourceTree = "<group>"; };
+		C28FC04F1CB74CDF00ACC937 /* _CUIThemeGradientRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CUIThemeGradientRendition.h; sourceTree = "<group>"; };
+		C28FC0501CB74CDF00ACC937 /* _CUIThemePixelRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CUIThemePixelRendition.h; sourceTree = "<group>"; };
+		C28FC0511CB74CDF00ACC937 /* CARExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARExporter.h; sourceTree = "<group>"; };
+		C28FC0521CB74CDF00ACC937 /* CARExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARExporter.m; sourceTree = "<group>"; };
+		C28FC0531CB74CDF00ACC937 /* CDStructures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDStructures.h; sourceTree = "<group>"; };
+		C28FC0541CB74CDF00ACC937 /* CGImage+Export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGImage+Export.h"; sourceTree = "<group>"; };
+		C28FC0551CB74CDF00ACC937 /* CoreUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreUI.h; sourceTree = "<group>"; };
+		C28FC0561CB74CDF00ACC937 /* CUICatalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUICatalog.h; sourceTree = "<group>"; };
+		C28FC0571CB74CDF00ACC937 /* CUICommonAssetStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUICommonAssetStorage.h; sourceTree = "<group>"; };
+		C28FC0581CB74CDF00ACC937 /* CUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUIImage.h; sourceTree = "<group>"; };
+		C28FC0591CB74CDF00ACC937 /* CUINamedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUINamedData.h; sourceTree = "<group>"; };
+		C28FC05A1CB74CDF00ACC937 /* CUINamedExternalLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUINamedExternalLink.h; sourceTree = "<group>"; };
+		C28FC05B1CB74CDF00ACC937 /* CUINamedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUINamedImage.h; sourceTree = "<group>"; };
+		C28FC05C1CB74CDF00ACC937 /* CUINamedImageAtlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUINamedImageAtlas.h; sourceTree = "<group>"; };
+		C28FC05D1CB74CDF00ACC937 /* CUINamedImageDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUINamedImageDescription.h; sourceTree = "<group>"; };
+		C28FC05E1CB74CDF00ACC937 /* CUINamedLayerImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUINamedLayerImage.h; sourceTree = "<group>"; };
+		C28FC05F1CB74CDF00ACC937 /* CUINamedLayerStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUINamedLayerStack.h; sourceTree = "<group>"; };
+		C28FC0601CB74CDF00ACC937 /* CUINamedLookup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUINamedLookup.h; sourceTree = "<group>"; };
+		C28FC0611CB74CDF00ACC937 /* CUIRenditionKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUIRenditionKey.h; sourceTree = "<group>"; };
+		C28FC0621CB74CDF00ACC937 /* CUIRenditionLayerReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUIRenditionLayerReference.h; sourceTree = "<group>"; };
+		C28FC0631CB74CDF00ACC937 /* CUIRenditionMetrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUIRenditionMetrics.h; sourceTree = "<group>"; };
+		C28FC0641CB74CDF00ACC937 /* CUIRenditionSliceInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUIRenditionSliceInformation.h; sourceTree = "<group>"; };
+		C28FC0651CB74CDF00ACC937 /* CUIStructuredThemeStorage-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CUIStructuredThemeStorage-Protocol.h"; sourceTree = "<group>"; };
+		C28FC0661CB74CDF00ACC937 /* CUIStructuredThemeStorage2-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CUIStructuredThemeStorage2-Protocol.h"; sourceTree = "<group>"; };
+		C28FC0671CB74CDF00ACC937 /* CUIStructuredThemeStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUIStructuredThemeStore.h; sourceTree = "<group>"; };
+		C28FC0681CB74CDF00ACC937 /* CUIThemeFacet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUIThemeFacet.h; sourceTree = "<group>"; };
+		C28FC0691CB74CDF00ACC937 /* CUIThemeImageSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUIThemeImageSource.h; sourceTree = "<group>"; };
+		C28FC06A1CB74CDF00ACC937 /* CUIThemeRendition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUIThemeRendition.h; sourceTree = "<group>"; };
+		C28FC06B1CB74CDF00ACC937 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA7B544019FF10F80019A015 /* CARExtractor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CARExtractor; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA7B544319FF10F80019A015 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA7B546319FF4A110019A015 /* CoreUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreUI.framework; path = ../../../../../../System/Library/PrivateFrameworks/CoreUI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -29,6 +66,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C28FC0461CB74CDF00ACC937 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C28FC0471CB74CDF00ACC937 /* _CSIRenditionBlockData.h */,
+				C28FC0481CB74CDF00ACC937 /* _CUIExternalLinkRendition.h */,
+				C28FC0491CB74CDF00ACC937 /* _CUIInternalLinkRendition.h */,
+				C28FC04A1CB74CDF00ACC937 /* _CUILayerStackRendition.h */,
+				C28FC04B1CB74CDF00ACC937 /* _CUIPDFRendition.h */,
+				C28FC04C1CB74CDF00ACC937 /* _CUIRawDataRendition.h */,
+				C28FC04D1CB74CDF00ACC937 /* _CUIRawPixelRendition.h */,
+				C28FC04E1CB74CDF00ACC937 /* _CUIThemeEffectRendition.h */,
+				C28FC04F1CB74CDF00ACC937 /* _CUIThemeGradientRendition.h */,
+				C28FC0501CB74CDF00ACC937 /* _CUIThemePixelRendition.h */,
+				C28FC0511CB74CDF00ACC937 /* CARExporter.h */,
+				C28FC0521CB74CDF00ACC937 /* CARExporter.m */,
+				C28FC0531CB74CDF00ACC937 /* CDStructures.h */,
+				C28FC0541CB74CDF00ACC937 /* CGImage+Export.h */,
+				C28FC0551CB74CDF00ACC937 /* CoreUI.h */,
+				C28FC0561CB74CDF00ACC937 /* CUICatalog.h */,
+				C28FC0571CB74CDF00ACC937 /* CUICommonAssetStorage.h */,
+				C28FC0581CB74CDF00ACC937 /* CUIImage.h */,
+				C28FC0591CB74CDF00ACC937 /* CUINamedData.h */,
+				C28FC05A1CB74CDF00ACC937 /* CUINamedExternalLink.h */,
+				C28FC05B1CB74CDF00ACC937 /* CUINamedImage.h */,
+				C28FC05C1CB74CDF00ACC937 /* CUINamedImageAtlas.h */,
+				C28FC05D1CB74CDF00ACC937 /* CUINamedImageDescription.h */,
+				C28FC05E1CB74CDF00ACC937 /* CUINamedLayerImage.h */,
+				C28FC05F1CB74CDF00ACC937 /* CUINamedLayerStack.h */,
+				C28FC0601CB74CDF00ACC937 /* CUINamedLookup.h */,
+				C28FC0611CB74CDF00ACC937 /* CUIRenditionKey.h */,
+				C28FC0621CB74CDF00ACC937 /* CUIRenditionLayerReference.h */,
+				C28FC0631CB74CDF00ACC937 /* CUIRenditionMetrics.h */,
+				C28FC0641CB74CDF00ACC937 /* CUIRenditionSliceInformation.h */,
+				C28FC0651CB74CDF00ACC937 /* CUIStructuredThemeStorage-Protocol.h */,
+				C28FC0661CB74CDF00ACC937 /* CUIStructuredThemeStorage2-Protocol.h */,
+				C28FC0671CB74CDF00ACC937 /* CUIStructuredThemeStore.h */,
+				C28FC0681CB74CDF00ACC937 /* CUIThemeFacet.h */,
+				C28FC0691CB74CDF00ACC937 /* CUIThemeImageSource.h */,
+				C28FC06A1CB74CDF00ACC937 /* CUIThemeRendition.h */,
+				C28FC06B1CB74CDF00ACC937 /* main.m */,
+			);
+			name = Sources;
+			path = CARExtractor/CARExtractor;
+			sourceTree = "<group>";
+		};
 		CA7B543719FF10F80019A015 = {
 			isa = PBXGroup;
 			children = (
@@ -48,8 +130,8 @@
 		CA7B544219FF10F80019A015 /* CARExtractor */ = {
 			isa = PBXGroup;
 			children = (
+				C28FC0461CB74CDF00ACC937 /* Sources */,
 				CA7B546319FF4A110019A015 /* CoreUI.framework */,
-				CA7B544319FF10F80019A015 /* main.m */,
 			);
 			path = CARExtractor;
 			sourceTree = "<group>";
@@ -127,7 +209,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA7B544419FF10F80019A015 /* main.m in Sources */,
+				C28FC06D1CB74CDF00ACC937 /* main.m in Sources */,
+				C28FC06C1CB74CDF00ACC937 /* CARExporter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
