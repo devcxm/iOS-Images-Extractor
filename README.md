@@ -8,6 +8,7 @@ iOS Images Extractor is a Mac app to normalize , decode and extract images from 
 
 ##Build
 ```
+git clone https://github.com/devcxm/iOS-Images-Extractor
 cd iOS-Images-Extractor
 git submodule update --init --recursive
 open iOSImagesExtractor.xcworkspace
