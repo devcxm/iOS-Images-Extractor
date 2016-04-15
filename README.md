@@ -1,5 +1,7 @@
 #iOS Images Extractor
-iOS Images Extractor is a Mac app to normalize , decode and extract images from iOS apps.
+iOS Images Extractor is a Mac app to normalize , decode and extract images from iOS apps. (PS: Sorry for my bad English)
+
+![logo](https://raw.githubusercontent.com/devcxm/iOS-Images-Extractor/master/iOSImagesExtractor/iOSImagesExtractor/Images.xcassets/AppIcon.appiconset/AppIcon-512.png)
 
 ##Support Files
 - `png、jpg`
@@ -25,6 +27,11 @@ open iOSImagesExtractor.xcworkspace
 
 ##Requirements
 _**OS X 10.8 or later.**_
+
+##Change Logs
+- v0.3.1  2016-05-15 Add app icons and update CARExtractor
+
+- v0.2.5  2015-06-02 First release.
 
 ##Credits
 
