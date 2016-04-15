@@ -29,7 +29,7 @@ open iOSImagesExtractor.xcworkspace
 _**OS X 10.8 or later.**_
 
 ##Change Logs
-- v0.3.1  2016-05-15 Add app icons and update CARExtractor
+- v0.3.1  2016-05-15 Add app icons and update CARExtractor.
 
 - v0.2.5  2015-06-02 First release.
 
