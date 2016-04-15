@@ -2,7 +2,7 @@
 
 ##发行版本
 
-###下载地址：[百度网盘下载](http://pan.baidu.com/s/1jG9wZcU)
+###下载地址：[百度网盘下载](http://pan.baidu.com/s/1i4T8seT)
 
 ##系统要求
 * 软件最低支持OS X 10.8
