@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8982EB4C2485060C00BCB558 /* CARExtractor in Resources */ = {isa = PBXBuildFile; fileRef = 8982EB4B2485060C00BCB558 /* CARExtractor */; };
 		C24D24F01B16047E00DDE534 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24D24EF1B16047E00DDE534 /* Images.xcassets */; };
 		C24D25141B16051500DDE534 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C24D25121B16051500DDE534 /* AppDelegate.m */; };
 		C24D25151B16051500DDE534 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C24D25131B16051500DDE534 /* main.m */; };
@@ -27,10 +28,10 @@
 		C24D25531B16120100DDE534 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C24D25511B16120100DDE534 /* Credits.rtf */; };
 		C2AE37681B1992090099434F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C2AE37671B1992090099434F /* LICENSE */; };
 		C2CF8B821B17F7EC00AA92B1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C24D24F11B16047E00DDE534 /* MainMenu.xib */; };
-		C2CF8B861B1805EF00AA92B1 /* CARExtractor in Resources */ = {isa = PBXBuildFile; fileRef = C2CF8B851B1805EF00AA92B1 /* CARExtractor */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8982EB4B2485060C00BCB558 /* CARExtractor */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = CARExtractor; path = ../../Products/CARExtractor; sourceTree = "<group>"; };
 		C24D24E51B16047E00DDE534 /* iOS Images Extractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Images Extractor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24D24E91B16047E00DDE534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C24D24EF1B16047E00DDE534 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -217,6 +218,7 @@
 				C24D254F1B1611F300DDE534 /* About */,
 				C24D24EF1B16047E00DDE534 /* Images.xcassets */,
 				C24D24F11B16047E00DDE534 /* MainMenu.xib */,
+				8982EB4B2485060C00BCB558 /* CARExtractor */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -291,6 +293,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -309,9 +312,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2CF8B861B1805EF00AA92B1 /* CARExtractor in Resources */,
 				C2CF8B821B17F7EC00AA92B1 /* MainMenu.xib in Resources */,
 				C24D254B1B16110000DDE534 /* DCOAboutWindow.xib in Resources */,
+				8982EB4C2485060C00BCB558 /* CARExtractor in Resources */,
 				C2AE37681B1992090099434F /* LICENSE in Resources */,
 				C24D25531B16120100DDE534 /* Credits.rtf in Resources */,
 				C24D24F01B16047E00DDE534 /* Images.xcassets in Resources */,
@@ -333,7 +336,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir -p \"${PROJECT_DIR}/../Products\";\ncp -r \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app\" \"${PROJECT_DIR}/../Products/${PRODUCT_NAME}.app\"";
+			shellScript = "mkdir -p \"${PROJECT_DIR}/../Products\";\ncp -r \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app\" \"${PROJECT_DIR}/../Products/${PRODUCT_NAME}.app\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -453,9 +456,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0602;
 				INFOPLIST_FILE = iOSImagesExtractor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 0.4.0;
 				PRODUCT_NAME = "iOS Images Extractor";
 				SDKROOT = macosx;
 			};
@@ -466,9 +471,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0602;
 				INFOPLIST_FILE = iOSImagesExtractor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 0.4.0;
 				PRODUCT_NAME = "iOS Images Extractor";
 				SDKROOT = macosx;
 			};

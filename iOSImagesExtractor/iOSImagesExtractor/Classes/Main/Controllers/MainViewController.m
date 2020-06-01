@@ -94,12 +94,43 @@
 
 @implementation MainViewController
 
+static void distributedNotificationCallback(CFNotificationCenterRef center,
+                     void *observer,
+                     CFStringRef name,
+                     const void *object,
+                     CFDictionaryRef userInfo)
+{
+    NSDictionary *userInfoObject = (__bridge NSDictionary *)(userInfo);
+    NSString *pname = [userInfoObject objectForKey:@"name"];
+    [(__bridge MainViewController *)observer setStatusString:[NSString stringWithFormat:@"Extracting %@", pname]];
+}
+
+- (void)setupNotification {
+    
+    CFNotificationCenterRef distributedCenter = CFNotificationCenterGetDistributedCenter();
+    
+    CFNotificationSuspensionBehavior behavior = CFNotificationSuspensionBehaviorDeliverImmediately;
+    
+    CFNotificationCenterAddObserver(distributedCenter,
+                                    (__bridge const void *)(self),
+                                    distributedNotificationCallback,
+                                    (__bridge const void *)([NSBundle mainBundle].bundleIdentifier),
+                                    NULL,
+                                    behavior);
+}
 
 #pragma mark - life cycel
+
+- (void)dealloc {
+    CFNotificationCenterRef distributedCenter = CFNotificationCenterGetDistributedCenter();
+     CFNotificationCenterRemoveObserver(distributedCenter, (__bridge const void *)(self), (__bridge const void *)([NSBundle mainBundle].bundleIdentifier), NULL);
+}
 
 - (void)awakeFromNib
 {
     self.dragView.delegate = self;
+    
+    [self setupNotification];
 
     // 获取CARExtractor执行程序路径
     // 1,先从Resource目录查找
@@ -130,9 +161,14 @@
  */
 - (void)setStatusString:(NSString*)stauts
 {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.statusLabel setStringValue:stauts];
-    });
+    if (![NSThread isMainThread]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self setStatusString:stauts];
+        });
+        return;
+    }
+    
+    [self.statusLabel setStringValue:stauts];
 }
 
 
@@ -144,7 +180,6 @@
 /**
  *  响应按钮点击
  *
- *  @param sender <#sender description#>
  */
 - (IBAction)clickButton:(NSButton*)sender {
     
@@ -216,10 +251,9 @@
                     
                     XMFileItem *fileItem = carArray[i];
                     
-                    NSString *outputPath = [existCarPath stringByAppendingPathComponent:[NSString stringWithFormat:@"car_images_%@", [MainViewController getRandomStringWithCount:5]
-                                                                                         ]];
+                    NSString *outputPath = [existCarPath stringByAppendingPathComponent:[NSString stringWithFormat:@"car_images_%@", [MainViewController getRandomStringWithCount:5]]];
                     [self setStatusString:[NSString stringWithFormat:@"Processing %@ ...", fileItem.fileName]];
-                    [self doCarFilesWithPath:fileItem.filePath outputPath:outputPath];
+                    [self exportCarFileAtPath:fileItem.filePath outputPath:outputPath tag:nil];
                 }
             }
 
@@ -420,7 +454,16 @@
     for (int i = 0; i < carArrayM.count; ++i) {// 处理car文件
          XMFileItem *fileItem = carArrayM[i];
         [self setStatusString:[NSString stringWithFormat:@"Processing %@ ...", fileItem.fileName]];
-        [self doCarFilesWithPath:fileItem.filePath outputPath:[outputPath stringByAppendingPathComponent:@"car_images"]];
+        NSString *tag = nil;
+        // ipa安装包不只1个car文件时，放在不同的文件夹
+        if (carArrayM.count > 1) {
+            NSString *filePath = fileItem.filePath;
+            if ([[filePath stringByDeletingLastPathComponent].pathExtension isEqualToString:@"app"]) {
+                tag = @"AppRoot";
+            }
+        }
+        
+        [self exportCarFileAtPath:fileItem.filePath outputPath:[outputPath stringByAppendingPathComponent:@"car_images"] tag:tag];
     }
     
 }
@@ -443,10 +486,10 @@
     NSData *saveData = nil;
     
     if ([extension isEqualToString:@"png"]) {
-        saveData = [self imageDataWithImage:tmpImage bitmapImageFileType:NSPNGFileType];
+        saveData = [self imageDataWithImage:tmpImage bitmapImageFileType:NSBitmapImageFileTypePNG];
     }
     else if ([extension isEqualToString:@"jpg"]){
-        saveData = [self imageDataWithImage:tmpImage bitmapImageFileType:NSJPEGFileType];
+        saveData = [self imageDataWithImage:tmpImage bitmapImageFileType:NSBitmapImageFileTypeJPEG];
     }
     
     // 写入新文件
@@ -466,7 +509,7 @@
 - (NSData*)imageDataWithImage:(NSImage*)image bitmapImageFileType:(NSBitmapImageFileType)fileType
 {
     NSBitmapImageRep *rep = [NSBitmapImageRep imageRepWithData:[image TIFFRepresentation]];
-    return [rep representationUsingType:fileType properties:nil];
+    return [rep representationUsingType:fileType properties:@{}];
 }
 
 /**
@@ -475,9 +518,7 @@
  *  @param path       Assets.car路径
  *  @param outputPath 保存路径
  */
-- (void)doCarFilesWithPath:(NSString*)path outputPath:(NSString*)outputPath
-{
-    
+- (void)exportCarFileAtPath:(NSString*)path outputPath:(NSString*)outputPath tag:(NSString *)tag {
     // 判断CARExtractor处理程序是否存在
     if (self.carExtractorLocation.length < 1) {
         dispatch_sync(dispatch_get_main_queue(), ^{
@@ -488,39 +529,28 @@
         return;
     }
     
-    // 以下源代码来自https://github.com/Marxon13/iOS-Asset-Extractor
+    if (tag.length == 0) {
+        NSString *bundleName = [path stringByDeletingLastPathComponent].lastPathComponent;
+        if ([bundleName.pathExtension caseInsensitiveCompare:@"bundle"] == NSOrderedSame) {
+            tag = [bundleName stringByReplacingOccurrencesOfString:@"." withString:@"_"];
+        }
+    }
     
-    //Create the task to run the process
+    if (tag.length > 0) {
+        outputPath = [outputPath stringByAppendingPathComponent:tag];
+    }
+    
+    
     NSTask *task = [[NSTask alloc] init];
     [task setLaunchPath:self.carExtractorLocation];
     
-    NSArray *arguments = @[@"-i", path, @"-o", outputPath];
+    NSArray *arguments = @[path, outputPath, [NSString stringWithFormat:@"--DistributedNotificationName=%@", [NSBundle mainBundle].bundleIdentifier]];
     [task setArguments:arguments];
     
-    //Handle output
-    NSPipe *pipe = [[NSPipe alloc] init];
-    task.standardOutput = pipe;
     
-    [pipe.fileHandleForReading waitForDataInBackgroundAndNotify];
-    [[NSNotificationCenter defaultCenter] addObserverForName:NSFileHandleDataAvailableNotification object:[pipe fileHandleForReading] queue:nil usingBlock:^(NSNotification *notification){
-//        NSData *output = [[pipe fileHandleForReading] availableData];
-//        NSString *outString = [[NSString alloc] initWithData:output encoding:NSUTF8StringEncoding];
-//        XMLog(@"ddddddddd%@", outString);
-//        if (outputPath.length > 0) {
-//            [self setStatusString:outString];
-//        }
-        
-        [[pipe fileHandleForReading] waitForDataInBackgroundAndNotify];
-    }];
-    
-    //Run the task
     [task launch];
     [task waitUntilExit];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:nil name:NSFileHandleDataAvailableNotification object:[pipe fileHandleForReading]];
-    
 }
-
 
 
 /**
@@ -528,8 +558,6 @@
  *
  *  @param path           遍历路径
  *  @param extensionArray 包含的扩展名
- *
- *  @return <#return value description#>
  */
 + (NSArray*)getFileListWithPath:(NSString*)path extensions:(NSArray*)extensionArray
 {
@@ -582,7 +610,7 @@
     
     
     if (err) {
-        XMLog(@"come here <#identifier#> %@ ...", err.localizedDescription);
+        XMLog(@"come here %@ ...", err.localizedDescription);
     }
 }
 
@@ -590,9 +618,6 @@
 /**
  *  获取随机字符串
  *
- *  @param count <#count description#>
- *
- *  @return <#return value description#>
  */
 + (NSString*)getRandomStringWithCount:(NSInteger)count
 {
@@ -618,14 +643,14 @@
 //- (NSView *)tableView:(NSTableView *)tableView
 //   viewForTableColumn:(NSTableColumn *)tableColumn
 //                  row:(NSInteger)row {
-//    
+//
 //    // Retrieve to get the @"MyView" from the pool or,
 //    // if no version is available in the pool, load the Interface Builder version
 //    NSTableCellView *result = [tableView makeViewWithIdentifier:@"MyView" owner:self];
-//    
+//
 //    // Set the stringValue of the cell's text field to the nameArray value at row
 //    result.textField.stringValue = [self.numberCodes objectAtIndex:row];
-//    
+//
 //    // Return the result
 //    return result;
 //}

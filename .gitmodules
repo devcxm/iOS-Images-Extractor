@@ -1,0 +1,3 @@
+[submodule "CARExtractor/QLCARFiles"]
+	path = CARExtractor/QLCARFiles
+	url = https://github.com/devcxm/QLCARFiles.git
