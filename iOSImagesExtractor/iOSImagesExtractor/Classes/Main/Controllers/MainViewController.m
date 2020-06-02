@@ -102,7 +102,7 @@ static void distributedNotificationCallback(CFNotificationCenterRef center,
 {
     NSDictionary *userInfoObject = (__bridge NSDictionary *)(userInfo);
     NSString *pname = [userInfoObject objectForKey:@"name"];
-    [(__bridge MainViewController *)observer setStatusString:[NSString stringWithFormat:@"Extracting %@", pname]];
+    [(__bridge MainViewController *)observer setStatusString:[NSString stringWithFormat:@"Extracting Assets.car %@", pname]];
 }
 
 - (void)setupNotification {
@@ -270,7 +270,7 @@ static void distributedNotificationCallback(CFNotificationCenterRef center,
                     XMFileItem *fileItem = carArray[i];
                     
                     NSString *outputPath = [existCarPath stringByAppendingPathComponent:[NSString stringWithFormat:@"car_images_%@", [MainViewController getRandomStringWithCount:5]]];
-                    [self setStatusString:[NSString stringWithFormat:@"Processing %@ ...", fileItem.fileName]];
+//                    [self setStatusString:[NSString stringWithFormat:@"Processing %@ ...", fileItem.fileName]];
                     [self exportCarFileAtPath:fileItem.filePath outputPath:outputPath tag:nil];
                 }
             }
@@ -564,7 +564,7 @@ static void distributedNotificationCallback(CFNotificationCenterRef center,
     
     for (int i = 0; i < carArrayM.count; ++i) {// 处理car文件
          XMFileItem *fileItem = carArrayM[i];
-        [self setStatusString:[NSString stringWithFormat:@"Processing %@ ...", fileItem.fileName]];
+//        [self setStatusString:[NSString stringWithFormat:@"Processing %@ ...", fileItem.fileName]];
         NSString *tag = nil;
         // ipa安装包不只1个car文件时，放在不同的文件夹
         if (carArrayM.count > 1) {

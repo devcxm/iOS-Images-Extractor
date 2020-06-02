@@ -12,8 +12,14 @@
 #import "CarUtilities.h"
 
 static NSString *kProccessingNotificationName = nil;
+static CFTimeInterval s_lastPostNotificationTime = 0;
 
 void postProccessingNotification(NSDictionary *userInfo) {
+    CFTimeInterval currentMediaTime = CACurrentMediaTime();
+    if (currentMediaTime - s_lastPostNotificationTime < 0.05f) {
+        return;
+    }
+    s_lastPostNotificationTime = currentMediaTime;
     if (kProccessingNotificationName && userInfo.count > 0) {
          CFNotificationCenterRef distributedCenter =
                CFNotificationCenterGetDistributedCenter();
