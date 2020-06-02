@@ -25,7 +25,7 @@ open iOSImagesExtractor.xcworkspace
 _**OS X 10.14 or later.**_
 
 ## Change Logs
-* v0.4.0 2020-06-02
+* v0.4.0 2020-06-03
 	* Replace extractor with [Timac/QLCARFiles](https://github.com/Timac/QLCARFiles).
 	* Support export raw PDF files.
 	* Better output folder grading.
