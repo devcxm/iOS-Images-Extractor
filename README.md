@@ -45,7 +45,7 @@ _**OS X 10.14 or later.**_
 
 - Danger Cove [DCOAboutWindow](https://github.com/DangerCove/DCOAboutWindow)
 
-- Timac [QLCARFiles](https://github.com/Timac/QLCARFiles
+- Timac [QLCARFiles](https://github.com/Timac/QLCARFiles)
 
 ## License
 
