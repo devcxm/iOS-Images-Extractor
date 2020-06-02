@@ -34,7 +34,14 @@
 @property (nonatomic, assign, readonly) BOOL isFileExists;
 
 
-#pragma mark - 类工厂
+#pragma mark - 类方法
 + (instancetype)xmFileItemWithPath:(NSString*)filePath;
+
+@end
+
+
+@interface NSString (_ShellPath)
+
+@property (nonatomic, copy, readonly) NSString *xm_shellPath;
 
 @end

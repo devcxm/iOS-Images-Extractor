@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		892829E22485EC1C009E0A31 /* QLCARFiles.qlgenerator in Resources */ = {isa = PBXBuildFile; fileRef = 892829E02485EC1C009E0A31 /* QLCARFiles.qlgenerator */; };
 		8982EB4C2485060C00BCB558 /* CARExtractor in Resources */ = {isa = PBXBuildFile; fileRef = 8982EB4B2485060C00BCB558 /* CARExtractor */; };
+		89A989562486368C009170D0 /* NSAlert+XM.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A989552486368C009170D0 /* NSAlert+XM.m */; };
 		C24D24F01B16047E00DDE534 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24D24EF1B16047E00DDE534 /* Images.xcassets */; };
 		C24D25141B16051500DDE534 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C24D25121B16051500DDE534 /* AppDelegate.m */; };
 		C24D25151B16051500DDE534 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C24D25131B16051500DDE534 /* main.m */; };
@@ -45,11 +47,36 @@
 			remoteGlobalIDString = 8982EB232484F82200BCB558;
 			remoteInfo = CARExtractor;
 		};
+		897AD2972485E812002D1D58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 897AD2922485E812002D1D58 /* QLCARFiles.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FA11D6741E7BF96900912157;
+			remoteInfo = QLCARFiles;
+		};
+		897AD2992485E812002D1D58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 897AD2922485E812002D1D58 /* QLCARFiles.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 029425B6217D00FF00ED1FA5;
+			remoteInfo = carDump;
+		};
+		897AD29B2485E84A002D1D58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 897AD2922485E812002D1D58 /* QLCARFiles.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FA11D6731E7BF96900912157;
+			remoteInfo = QLCARFiles;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		892829E02485EC1C009E0A31 /* QLCARFiles.qlgenerator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = QLCARFiles.qlgenerator; path = ../Products/QLCARFiles.qlgenerator; sourceTree = "<group>"; };
 		89623989248508EE005E7EC9 /* CARExtractor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CARExtractor.xcodeproj; path = ../CARExtractor/CARExtractor.xcodeproj; sourceTree = "<group>"; };
+		897AD2922485E812002D1D58 /* QLCARFiles.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QLCARFiles.xcodeproj; path = ../CARExtractor/QLCARFiles/QLCARFiles.xcodeproj; sourceTree = "<group>"; };
 		8982EB4B2485060C00BCB558 /* CARExtractor */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = CARExtractor; path = ../../Products/CARExtractor; sourceTree = "<group>"; };
+		89A989542486368C009170D0 /* NSAlert+XM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAlert+XM.h"; sourceTree = "<group>"; };
+		89A989552486368C009170D0 /* NSAlert+XM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+XM.m"; sourceTree = "<group>"; };
 		C24D24E51B16047E00DDE534 /* iOS Images Extractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Images Extractor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24D24E91B16047E00DDE534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C24D24EF1B16047E00DDE534 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -108,9 +135,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		897AD2932485E812002D1D58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				897AD2982485E812002D1D58 /* QLCARFiles.qlgenerator */,
+				897AD29A2485E812002D1D58 /* carDump */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C24D24DC1B16047D00DDE534 = {
 			isa = PBXGroup;
 			children = (
+				892829E02485EC1C009E0A31 /* QLCARFiles.qlgenerator */,
+				897AD2922485E812002D1D58 /* QLCARFiles.xcodeproj */,
 				89623989248508EE005E7EC9 /* CARExtractor.xcodeproj */,
 				C24D24E71B16047E00DDE534 /* iOSImagesExtractor */,
 				C24D24E61B16047E00DDE534 /* Products */,
@@ -235,6 +273,8 @@
 			children = (
 				C24D253C1B16058A00DDE534 /* XMDragView.h */,
 				C24D253D1B16058A00DDE534 /* XMDragView.m */,
+				89A989542486368C009170D0 /* NSAlert+XM.h */,
+				89A989552486368C009170D0 /* NSAlert+XM.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,6 +335,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				897AD29C2485E84A002D1D58 /* PBXTargetDependency */,
 				8962399024850902005E7EC9 /* PBXTargetDependency */,
 			);
 			name = iOSImagesExtractor;
@@ -333,6 +374,10 @@
 					ProductGroup = 8962398A248508EE005E7EC9 /* Products */;
 					ProjectRef = 89623989248508EE005E7EC9 /* CARExtractor.xcodeproj */;
 				},
+				{
+					ProductGroup = 897AD2932485E812002D1D58 /* Products */;
+					ProjectRef = 897AD2922485E812002D1D58 /* QLCARFiles.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -349,6 +394,20 @@
 			remoteRef = 8962398D248508EE005E7EC9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		897AD2982485E812002D1D58 /* QLCARFiles.qlgenerator */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QLCARFiles.qlgenerator;
+			remoteRef = 897AD2972485E812002D1D58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		897AD29A2485E812002D1D58 /* carDump */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = carDump;
+			remoteRef = 897AD2992485E812002D1D58 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -356,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892829E22485EC1C009E0A31 /* QLCARFiles.qlgenerator in Resources */,
 				C2CF8B821B17F7EC00AA92B1 /* MainMenu.xib in Resources */,
 				C24D254B1B16110000DDE534 /* DCOAboutWindow.xib in Resources */,
 				8982EB4C2485060C00BCB558 /* CARExtractor in Resources */,
@@ -380,7 +440,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir -p \"${PROJECT_DIR}/../Products\";\ncp -r \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app\" \"${PROJECT_DIR}/../Products/${PRODUCT_NAME}.app\"\n";
+			shellScript = "mkdir -p \"${PROJECT_DIR}/../Products\";\nrm -rf \"${PROJECT_DIR}/../Products/${PRODUCT_NAME}.app\";\ncp -r \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app\" \"${PROJECT_DIR}/../Products/${PRODUCT_NAME}.app\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -393,6 +453,7 @@
 				C24D25301B16053200DDE534 /* ZipArchive.m in Sources */,
 				C24D252F1B16053200DDE534 /* zip.c in Sources */,
 				C24D254D1B16110000DDE534 /* DCOTransparentScroller.m in Sources */,
+				89A989562486368C009170D0 /* NSAlert+XM.m in Sources */,
 				C24D25351B16054000DDE534 /* MainViewController.m in Sources */,
 				C24D254E1B16110000DDE534 /* DCOTransparentScrollView.m in Sources */,
 				C24D252E1B16053200DDE534 /* unzip.c in Sources */,
@@ -412,6 +473,11 @@
 			isa = PBXTargetDependency;
 			name = CARExtractor;
 			targetProxy = 8962398F24850902005E7EC9 /* PBXContainerItemProxy */;
+		};
+		897AD29C2485E84A002D1D58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QLCARFiles;
+			targetProxy = 897AD29B2485E84A002D1D58 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

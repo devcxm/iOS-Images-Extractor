@@ -51,12 +51,24 @@
 
 
 
-#pragma mark - 类工厂
 + (instancetype)xmFileItemWithPath:(NSString*)filePath
 {
     XMFileItem *item = [[self alloc]init];
     item.filePath = filePath;
     return item;
+}
+
+@end
+
+
+@implementation NSString (_ShellPath)
+
+- (NSString *)xm_shellPath {
+    NSString *spaceString =@" ";
+    NSString *backslash = @"\\";
+    NSString *path = [self stringByReplacingOccurrencesOfString:@" " withString:[NSString stringWithFormat:@"%@%@",backslash,spaceString]];
+    
+    return path;
 }
 
 @end

@@ -168,7 +168,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir -p \"${PROJECT_DIR}/../Products\";\ncp \"${TARGET_BUILD_DIR}/${TARGET_NAME}\" \"${PROJECT_DIR}/../Products/${TARGET_NAME}\"\n";
+			shellScript = "mkdir -p \"${PROJECT_DIR}/../Products\";\nrm -f \"${PROJECT_DIR}/../Products/${TARGET_NAME}\";\ncp \"${TARGET_BUILD_DIR}/${TARGET_NAME}\" \"${PROJECT_DIR}/../Products/${TARGET_NAME}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

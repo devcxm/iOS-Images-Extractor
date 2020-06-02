@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainViewController">
@@ -32,7 +33,7 @@
                     </connections>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jZR-QD-oPz">
-                    <rect key="frame" x="23" y="71" width="504" height="18"/>
+                    <rect key="frame" x="23" y="70" width="504" height="19"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="500" id="0IJ-uH-1hQ"/>
                     </constraints>
@@ -44,7 +45,7 @@
                 </textField>
                 <button verticalHuggingPriority="750" tag="400" translatesAutoresizingMaskIntoConstraints="NO" id="KuE-zc-XRX">
                     <rect key="frame" x="482" y="367" width="104" height="32"/>
-                    <buttonCell key="cell" type="push" title="About" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FxV-yf-v0l">
+                    <buttonCell key="cell" type="push" title="More" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FxV-yf-v0l">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -55,19 +56,18 @@
                 <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1e-kK-psf">
                     <rect key="frame" x="20" y="129" width="570" height="200"/>
                     <clipView key="contentView" id="a3K-3H-Kyk">
-                        <rect key="frame" x="1" y="17" width="238" height="117"/>
+                        <rect key="frame" x="1" y="0.0" width="568" height="199"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="MC4-8o-wop" id="gY6-eF-w76">
-                                <rect key="frame" x="0.0" y="0.0" width="663" height="19"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <rect key="frame" x="0.0" y="0.0" width="663" height="182"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
                                     <tableColumn identifier="name" width="150" minWidth="40" maxWidth="1000" id="bBP-Hn-ZKK">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Name">
-                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                         </tableHeaderCell>
@@ -80,7 +80,6 @@
                                     </tableColumn>
                                     <tableColumn identifier="path" width="507" minWidth="40" maxWidth="1000" id="g3v-hy-su9">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Path">
-                                            <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                         </tableHeaderCell>
@@ -98,21 +97,20 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </clipView>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="Kxm-Qc-zZR"/>
                     </constraints>
-                    <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="wQe-Gx-bSB">
-                        <rect key="frame" x="1" y="119" width="223" height="15"/>
+                    <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="wQe-Gx-bSB">
+                        <rect key="frame" x="1" y="183" width="568" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="GRQ-61-byA">
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="GRQ-61-byA">
                         <rect key="frame" x="224" y="17" width="15" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <tableHeaderView key="headerView" id="MC4-8o-wop">
-                        <rect key="frame" x="0.0" y="0.0" width="238" height="17"/>
+                        <rect key="frame" x="0.0" y="0.0" width="663" height="17"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </tableHeaderView>
                 </scrollView>
@@ -137,15 +135,15 @@
                     </connections>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rbT-Bn-kZi">
-                    <rect key="frame" x="21" y="372" width="405" height="18"/>
+                    <rect key="frame" x="21" y="373" width="401" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Drag source files(ipa, car, png, jpg) or folder into this window." id="qNd-fS-PqP">
-                        <font key="font" metaFont="system" size="14"/>
+                        <font key="font" metaFont="menu" size="14"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="trp-9v-MPU">
-                    <rect key="frame" x="21" y="345" width="307" height="17"/>
+                    <rect key="frame" x="21" y="347" width="300" height="16"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Note: Extract car file requires OS X 10.10 or later." id="dvZ-td-n5i">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="scrollBarColor" catalog="System" colorSpace="catalog"/>

@@ -48,8 +48,7 @@
     NSArray *consV = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0.0-[selfView]-0.0-|" options:0 metrics:nil views:views];
     [selfView.superview addConstraints:consV];
     
-    
-    
+    [self.mainVc checkForUpdates:NO];
 }
 
 - (IBAction)showAboutWindow:(id)sender {
@@ -60,6 +59,10 @@
     
     // Show the about window
     [self.aboutWindowController showWindow:nil];
+}
+
+- (void)application:(NSApplication *)sender openFiles:(NSArray<NSString *> *)filenames {
+    NSLog(@"");
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

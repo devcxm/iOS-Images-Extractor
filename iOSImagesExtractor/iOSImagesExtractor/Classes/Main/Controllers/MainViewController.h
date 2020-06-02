@@ -16,4 +16,6 @@
 
 @interface MainViewController : NSViewController
 
+- (void)checkForUpdates:(BOOL)manualCheck;
+
 @end
