@@ -30,7 +30,25 @@
 		C2CF8B821B17F7EC00AA92B1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C24D24F11B16047E00DDE534 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8962398D248508EE005E7EC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89623989248508EE005E7EC9 /* CARExtractor.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8982EB242484F82200BCB558;
+			remoteInfo = CARExtractor;
+		};
+		8962398F24850902005E7EC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89623989248508EE005E7EC9 /* CARExtractor.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8982EB232484F82200BCB558;
+			remoteInfo = CARExtractor;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		89623989248508EE005E7EC9 /* CARExtractor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CARExtractor.xcodeproj; path = ../CARExtractor/CARExtractor.xcodeproj; sourceTree = "<group>"; };
 		8982EB4B2485060C00BCB558 /* CARExtractor */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = CARExtractor; path = ../../Products/CARExtractor; sourceTree = "<group>"; };
 		C24D24E51B16047E00DDE534 /* iOS Images Extractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Images Extractor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24D24E91B16047E00DDE534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,9 +100,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8962398A248508EE005E7EC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8962398E248508EE005E7EC9 /* CARExtractor */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C24D24DC1B16047D00DDE534 = {
 			isa = PBXGroup;
 			children = (
+				89623989248508EE005E7EC9 /* CARExtractor.xcodeproj */,
 				C24D24E71B16047E00DDE534 /* iOSImagesExtractor */,
 				C24D24E61B16047E00DDE534 /* Products */,
 			);
@@ -268,6 +295,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8962399024850902005E7EC9 /* PBXTargetDependency */,
 			);
 			name = iOSImagesExtractor;
 			productName = iOSImagesExtractor;
@@ -300,12 +328,28 @@
 			mainGroup = C24D24DC1B16047D00DDE534;
 			productRefGroup = C24D24E61B16047E00DDE534 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8962398A248508EE005E7EC9 /* Products */;
+					ProjectRef = 89623989248508EE005E7EC9 /* CARExtractor.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C24D24E41B16047D00DDE534 /* iOSImagesExtractor */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8962398E248508EE005E7EC9 /* CARExtractor */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = CARExtractor;
+			remoteRef = 8962398D248508EE005E7EC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C24D24E31B16047D00DDE534 /* Resources */ = {
@@ -362,6 +406,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8962399024850902005E7EC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CARExtractor;
+			targetProxy = 8962398F24850902005E7EC9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C24D24F11B16047E00DDE534 /* MainMenu.xib */ = {

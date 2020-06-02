@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CA7B543F19FF10F80019A015"
+               BlueprintIdentifier = "8982EB232484F82200BCB558"
                BuildableName = "CARExtractor"
                BlueprintName = "CARExtractor"
                ReferencedContainer = "container:../CARExtractor/CARExtractor.xcodeproj">

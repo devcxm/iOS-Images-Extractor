@@ -22,14 +22,20 @@ open iOSImagesExtractor.xcworkspace
 
 
 ## Requirements
-_**OS X 10.8 or later.**_
+_**OS X 10.14 or later.**_
 
 ## Change Logs
-- ###v0.3.1 2016-05-15
-Add app icons and update CARExtractor.
+* v0.4.0 2020-06-02
+	* Replace extractor with [Timac/QLCARFiles](https://github.com/Timac/QLCARFiles).
+	* Support export raw PDF files.
+	* Better output folder grading.
+	* Quickly install `QLCARFiles`(macOS QuickLook Plugin) to visualize .car files.
 
-- ###v0.2.5 2015-06-02
-First release.
+- v0.3.1 2016-05-15
+	* Add app icons and update CARExtractor.
+
+- v0.2.5 2015-06-02
+	* First release.
 
 ## Credits
 
@@ -38,6 +44,8 @@ First release.
 - Brandon McQuilkin [iOS-Asset-Extractor](https://github.com/Marxon13/iOS-Asset-Extractor)
 
 - Danger Cove [DCOAboutWindow](https://github.com/DangerCove/DCOAboutWindow)
+
+- Timac [QLCARFiles](https://github.com/Timac/QLCARFiles
 
 ## License
 
