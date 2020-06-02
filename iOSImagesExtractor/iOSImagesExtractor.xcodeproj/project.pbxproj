@@ -71,7 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		892829E02485EC1C009E0A31 /* QLCARFiles.qlgenerator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = QLCARFiles.qlgenerator; path = ../Products/QLCARFiles.qlgenerator; sourceTree = "<group>"; };
+		892829E02485EC1C009E0A31 /* QLCARFiles.qlgenerator */ = {isa = PBXFileReference; lastKnownFileType = file; name = QLCARFiles.qlgenerator; path = ../../Products/QLCARFiles.qlgenerator; sourceTree = "<group>"; };
 		89623989248508EE005E7EC9 /* CARExtractor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CARExtractor.xcodeproj; path = ../CARExtractor/CARExtractor.xcodeproj; sourceTree = "<group>"; };
 		897AD2922485E812002D1D58 /* QLCARFiles.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QLCARFiles.xcodeproj; path = ../CARExtractor/QLCARFiles/QLCARFiles.xcodeproj; sourceTree = "<group>"; };
 		8982EB4B2485060C00BCB558 /* CARExtractor */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = CARExtractor; path = ../../Products/CARExtractor; sourceTree = "<group>"; };
@@ -147,7 +147,6 @@
 		C24D24DC1B16047D00DDE534 = {
 			isa = PBXGroup;
 			children = (
-				892829E02485EC1C009E0A31 /* QLCARFiles.qlgenerator */,
 				897AD2922485E812002D1D58 /* QLCARFiles.xcodeproj */,
 				89623989248508EE005E7EC9 /* CARExtractor.xcodeproj */,
 				C24D24E71B16047E00DDE534 /* iOSImagesExtractor */,
@@ -283,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				C24D254F1B1611F300DDE534 /* About */,
+				892829E02485EC1C009E0A31 /* QLCARFiles.qlgenerator */,
 				C24D24EF1B16047E00DDE534 /* Images.xcassets */,
 				C24D24F11B16047E00DDE534 /* MainMenu.xib */,
 				8982EB4B2485060C00BCB558 /* CARExtractor */,
