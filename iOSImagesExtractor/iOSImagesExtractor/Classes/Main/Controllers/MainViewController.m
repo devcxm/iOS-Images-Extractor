@@ -309,7 +309,7 @@ static void distributedNotificationCallback(CFNotificationCenterRef center,
         } else {
             NSString *qlgeneratorSourcePath = [[NSBundle mainBundle].resourcePath stringByAppendingPathComponent:@"QLCARFiles.qlgenerator"];
             [self.class excuteShellScript:[NSString stringWithFormat:@"xattr -c -r %@;cp -r %@ %@;qlmanage -r;", qlgeneratorSourcePath.xm_shellPath, qlgeneratorSourcePath.xm_shellPath, destPath.xm_shellPath]];
-            informativeText = @"Install QLCARFiles successfully.";
+            informativeText = @"Install QLCARFiles successfully, if QuickLook plugins not woking, you can try to log out macOS, then log in back.";
         }
         
         [[NSAlert xm_alertWithMessageText:@"macOS Quick Look Plugin" informativeText:informativeText defaultButton:nil] beginSheetModalForWindow:self.view.window completionHandler:nil];
