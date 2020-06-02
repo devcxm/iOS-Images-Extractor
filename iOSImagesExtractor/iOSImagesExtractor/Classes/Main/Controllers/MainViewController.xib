@@ -143,8 +143,8 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="trp-9v-MPU">
-                    <rect key="frame" x="21" y="347" width="300" height="16"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Note: Extract car file requires OS X 10.10 or later." id="dvZ-td-n5i">
+                    <rect key="frame" x="21" y="347" width="453" height="16"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Note: QuickLook plugin to visualize .car files is available on &quot;More&quot; Button." id="dvZ-td-n5i">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="scrollBarColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

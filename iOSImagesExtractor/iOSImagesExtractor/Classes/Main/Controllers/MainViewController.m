@@ -385,6 +385,13 @@ static void distributedNotificationCallback(CFNotificationCenterRef center,
                 });
                 
             }
+        } else {
+            if (manualCheck) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [[NSAlert xm_alertWithMessageText:@"Update" informativeText:@"Failed to check for updates." defaultButton:nil] beginSheetModalForWindow:self.view.window completionHandler:nil];
+                });
+            }
+            
         }
     }] resume];
 }
