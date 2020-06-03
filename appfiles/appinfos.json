@@ -1,8 +1,9 @@
 {
   "name": "iOS-Images-Extractor",
   "version": "0.4.0",
+  "release_date": "20200603",
   "changelog": "1.Replace extractor with Timac/QLCARFiles.\n2.Support export raw PDF files.\n3.Better output folder grading.\n4.Quickly install QLCARFiles(macOS QuickLook Plugin) to visualize .car files.",
-  "build": "0602",
+  "build": "0603",
   "app_update_url": "https://github.com/devcxm/iOS-Images-Extractor/releases",
   "quick_look_plugin_download_url": null
 }
